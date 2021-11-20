@@ -39,10 +39,12 @@ const Game = () => {
     if (playerWon && winner !== "Draw" && winner !== "o") {
       setWinner("x");
       setUserwins(userwins + 1);
+      return;
     }
     if (computerWon && winner !== "Draw" && winner !== "x") {
       setWinner("o");
       setComputerwins(computerwins + 1);
+      return;
     }
     const putComputerAt = (index) => {
       setTimeout(() => {}, 3000);
@@ -103,7 +105,7 @@ const Game = () => {
   const PlayerStats = () => {
     return (
       <div className={styles.stats}>
-        <div>🧑🏽{userwins / 2}</div>
+        <div>🧑🏽{userwins}</div>
         <div>💻{computerwins}</div>
       </div>
     );
