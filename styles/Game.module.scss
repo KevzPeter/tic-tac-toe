@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.board {
+  display: grid;
+  border: 2px solid #fff;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+div.square {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  font-size: 4rem;
+  text-align: center;
+}
+div.result {
+  font-size: 1rem;
+  padding: 10px;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+#green {
+  background-color: #4caf50;
+}
+#red {
+  background-color: #f44336;
+}
+#white {
+  background-color: white;
+  color: #202020;
+}
