@@ -94,14 +94,19 @@ const Game = () => {
           <Square key={index} x={square === "x" ? 1 : 0} o={square === "o" ? 1 : 0} onClick={() => handleSquareClick(index)} />
         ))}
       </Board>
+      {squares.filter((square) => square !== null).length == 9 && (
+        <div className={styles.result} id={styles.white}>
+          Game Drawn 😐
+        </div>
+      )}
       {!!winner && winner === "x" && (
         <div className={styles.result} id={styles.green}>
-          You Won!
+          You Won 🥳
         </div>
       )}
       {!!winner && winner === "o" && (
         <div className={styles.result} id={styles.red}>
-          Computer Won!
+          Computer Won 😢
         </div>
       )}
     </div>
